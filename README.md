@@ -6,11 +6,16 @@ Para rodar as animações é necessário ```Python 3.7 ou Maior```
 
 Baixe o Manim e o teste.
 
-```sh
+```
 # Intalar manimgl
 pip install manimgl
 
 # Teste
 manimgl
+```
+
+Após isso é só executar o comando na execução do script de seu interesse, a classe principal sempre será nomeada "Main".
+```
+manimgl derivadas_fracionarias.py Main
 ```
 
