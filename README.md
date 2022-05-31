@@ -1,2 +1,4 @@
-# Math videos of "Matemática da Raiz"
-Animation of videos created programmatically using the Manim/3b1b tool for the "Matématica da Raiz" channel.
+# Gerador de videos de matemática da "Matemática da Raiz"
+Aqui nesse repositório está os fontes para geração das animações utilizando a ferramenta "Manim"
+para criação dos videos do canal "Matemática da Raiz".
+
