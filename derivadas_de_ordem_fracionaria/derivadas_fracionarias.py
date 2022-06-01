@@ -32,7 +32,18 @@ class Cancel(VGroup):
 
 class Main(Scene):
     def construct(self):     
-        self.scene13()
+        self.scene1()
+        self.scene2()
+        self.scene3()
+        self.scene4()
+        self.scene5()
+        self.scene6()
+        self.scene7()
+        self.scene8()
+        self.scene9()
+        self.scene10()
+        self.scene11()
+        self.scene12()
     
     def scene1(self):
         intro_words = Text("""
@@ -43,10 +54,10 @@ class Main(Scene):
         self.play(Write(intro_words))
         self.wait(2)
         
-        frase = VGroup(Tex("f"), Text("é repetido n vezes."))
+        frase = VGroup(Tex("f", color=RED), Text("é repetido n vezes."))
         frase.arrange(RIGHT)
         lines_1 = VGroup(
-            Text("Funções iteradas:"),
+            Text("Funções iteradas:", color=BLUE),
             Tex("f^n", "=", "f(f(f(...f()...)))"),
             frase,
         )
@@ -55,10 +66,22 @@ class Main(Scene):
         self.play(FadeTransform(intro_words, lines_1))
         self.wait(2)
         
+        frase = VGroup(Text("Nesse caso "), Tex("g^{\\frac{1}{2}}(x) = f(x)", color=RED))
+        frase.arrange(RIGHT)
+        lines_22 = VGroup(
+            Text("Funções de iteração fracionárias:", color=BLUE),
+            Tex("f(x)", "=", "g(g(x))"),
+            frase
+        )
+        lines_22.arrange(DOWN, buff=LARGE_BUFF)
+        
+        self.play(FadeTransform(lines_1, lines_22))
+        self.wait(2)
+        
         frase = VGroup(Tex("f^{-1}(x)", "=", "\sqrt{x}"), Text("se"), Tex("x\geq0"))
         frase.arrange(RIGHT)
         lines_2 = VGroup(
-            Text("Pode definição temos funções inversas"),
+            Text("Pode definição temos funções inversas", t2c={"funções inversas":BLUE}),
             Text("Por exemplos se:"),
             Tex("f(x)", "=", "x^2"),
             Text("Sabemos que inversa do potencia quadrada é a raiz:"),
@@ -66,10 +89,10 @@ class Main(Scene):
         )
         lines_2.arrange(DOWN, buff=LARGE_BUFF)
         
-        self.play(FadeTransform(lines_1, lines_2))
+        self.play(FadeTransform(lines_22, lines_2))
         self.wait(2)
            
-        frase = VGroup(Text("Podemos aplicar"), Tex("f(x)"), Text("e"), Tex("f(f(x))"), Text("continuamente..."))
+        frase = VGroup(Text("Podemos aplicar"), Tex("f(x)", color=RED), Text("e"), Tex("f(f(x))", color=RED), Text("continuamente..."))
         frase.arrange(RIGHT)
         lines_3 = VGroup(
             Text("Em uma função iterativa é possivel descobrir formula por meio de indução!"),
@@ -83,7 +106,7 @@ class Main(Scene):
         eq_1 = Tex("f(x)", "=", "x^k")
         eq_2 = Tex("f'(x)", "=", "kx^{k-1}")
         eq_3 = Tex("f''(x)", "=", "k(k-1)x^{k-2}")
-        eq_4 = Tex("f^n(x)", "=", "\\frac{k!}{(k-n)!}x^{k-n}")
+        eq_4 = Tex("f^{(n)}(x)", "=", "\\frac{k!}{(k-n)!}x^{k-n}")
         
         lines_4 = VGroup(
             eq_1,
@@ -168,24 +191,25 @@ class Main(Scene):
         l_10 = Text("Até (k-n).")
         l_10.next_to(l_9, DOWN, buff=0.5)
         self.play(Write(l_10))
+        self.wait(4)
         self.remove(*self.mobjects)
         
     def scene3(self):
-        eq_4 = Tex("f^n(x)", "=", "\\frac{k!}{(k-n)!}x^{k-n}")
+        eq_4 = Tex("f^{(n)}(x)", "=", "\\frac{k!}{(k-n)!}x^{k-n}")
         self.play(Write(eq_4))
         
-        frase = VGroup(Text("Definido apenas para "), Tex("n \in \mathbb{N}"))
+        frase = VGroup(Text("Definido apenas para "), Tex("n \in \mathbb{N}", color=BLUE))
         frase.arrange(RIGHT)
         frase.next_to(eq_4, DOWN, buff=0.5)
         
         self.play(Write(frase))
         
-        frase_2 = VGroup(Text("Podemos expandir a derivada iterada para  "), Tex("n \in \mathbb{R}"))
+        frase_2 = VGroup(Text("Podemos expandir a derivada iterada para  "), Tex("n \in \mathbb{R}", color=BLUE))
         frase_2.arrange(RIGHT)
         frase_2.next_to(frase, DOWN, buff=0.5)
         
         self.play(Write(frase_2))
-        eq_4_gamma = Tex("f^n(x)", "=", "\\frac{\Gamma(k+1)}{\Gamma(k-n+1)}x^{k-n}")
+        eq_4_gamma = Tex("f^{(n)}(x)", "=", "\\frac{\Gamma(k+1)}{\Gamma(k-n+1)}x^{k-n}")
         self.play(ReplacementTransform(eq_4, eq_4_gamma))
         self.wait(2)
         self.remove(*self.mobjects)
@@ -231,13 +255,13 @@ class Main(Scene):
         l_1.to_edge(UP)
         l_2 = Tex("f(x)", "=", "e^{ix}")
         l_2.next_to(l_1, DOWN, buff=0.3)
-        l_3 = Tex("f^n(x)", "=", "(ix)^ne^{ix}")
+        l_3 = Tex("f^{(n)}(x)", "=", "(ix)^ne^{ix}")
         l_3.next_to(l_2, DOWN, buff=0.7)
-        l_4 = Tex("f^n(x)", "=", "(xe^{i\\frac{\\pi}{2}})^ne^{ix}")
+        l_4 = Tex("f^{(n)}(x)", "=", "(xe^{i\\frac{\\pi}{2}})^ne^{ix}")
         l_4.next_to(l_3, DOWN, buff=0.3)
-        l_5 = Tex("f^n(x)", "=", "x^ne^{i(n\\frac{\\pi}{2} + x)}")
+        l_5 = Tex("f^{(n)}(x)", "=", "x^ne^{i(n\\frac{\\pi}{2} + x)}")
         l_5.next_to(l_4, DOWN, buff=0.3)
-        l_6 = Tex("f^n(x)", "=", "x^n(cos(n\\frac{\\pi}{2} + x) + isin(n\\frac{\\pi}{2} + x))")
+        l_6 = Tex("f^{(n)}(x)", "=", "x^n(cos(n\\frac{\\pi}{2} + x) + isin(n\\frac{\\pi}{2} + x))")
         l_6.next_to(l_5, DOWN, buff=0.3)
   
         
@@ -249,18 +273,18 @@ class Main(Scene):
         self.play(Write(l_6))
         self.wait(2)
         
-    def scene6(self):
+    def scene7(self):
         l_1 = Tex("e^{ix}", "=", "cos(x) + isin(x)")
         l_1.to_edge(UP, buff=0.5)
         l_2 = Tex("f(x)", "=", "e^{ix}")
         l_2.next_to(l_1, DOWN, buff=0.3)
-        l_3 = Tex("f^n(x)", "=", "(ix)^ne^{ix}")
+        l_3 = Tex("f^{(n)}(x)", "=", "(ix)^ne^{ix}")
         l_3.next_to(l_2, DOWN, buff=0.7)
-        l_4 = Tex("f^n(x)", "=", "(xe^{i\\frac{\\pi}{2}})^ne^{ix}")
+        l_4 = Tex("f^{(n)}(x)", "=", "(xe^{i\\frac{\\pi}{2}})^ne^{ix}")
         l_4.next_to(l_3, DOWN, buff=0.3)
-        l_5 = Tex("f^n(x)", "=", "x^ne^{i(n\\frac{\\pi}{2} + x)}")
+        l_5 = Tex("f^{(n)}(x)", "=", "x^ne^{i(n\\frac{\\pi}{2} + x)}")
         l_5.next_to(l_4, DOWN, buff=0.3)
-        l_6 = Tex("f^n(x)", "=", "x^n(cos(n\\frac{\\pi}{2} + x) + isin(n\\frac{\\pi}{2} + x))")
+        l_6 = Tex("f^{(n)}(x)", "=", "x^n(cos(n\\frac{\\pi}{2} + x) + isin(n\\frac{\\pi}{2} + x))")
         l_6.next_to(l_5, DOWN, buff=0.3)
   
         
@@ -285,8 +309,8 @@ class Main(Scene):
         self.play(Write(l_8))
         self.wait(4)
         self.remove(*self.mobjects)
-    def scene7(self):
-        frase_1 = Text("Fórmula de Cauchy para integrações repetidas.")
+    def scene8(self):
+        frase_1 = Text("Fórmula de Cauchy para integrações repetidas.", color=BLUE)
         frase_1.to_edge(UP, buff=2)
         self.play(Write(frase_1))
         self.wait(2)
@@ -325,11 +349,11 @@ class Main(Scene):
         l_8.next_to(l_1, DOWN, buff=0.8)
         self.play(ReplacementTransform(l_7, l_8))
         self.wait(2)
-        l_9 = Tex("g'(x) = f^{-1}(t)")
+        l_9 = Tex("g'(x) = f^{(-1)}(t)")
         l_9.next_to(l_1, DOWN, buff=0.8)
         self.play(ReplacementTransform(l_8, l_9))
         self.wait(2)
-        l_10 = Tex("g(x) = f^{-2}(t)")
+        l_10 = Tex("g(x) = f^{(-2)}(t)")
         l_10.next_to(l_1, DOWN, buff=0.8)
         l_11 = Text("Como podemos provar.")
         l_11.next_to(l_10, DOWN, buff=0.8)
@@ -338,8 +362,8 @@ class Main(Scene):
         self.wait(4)
         self.remove(*self.mobjects)
         
-    def scene8(self):
-        frase_1 = Text("Integrais Fracionarias de Riemann-Liouville.")
+    def scene9(self):
+        frase_1 = Text("Integrais Fracionarias de Riemann-Liouville.", color=BLUE)
         frase_1.to_edge(UP, buff=2)
         self.play(Write(frase_1))
         self.wait(2)
@@ -350,28 +374,11 @@ class Main(Scene):
         frase.next_to(l_1, DOWN, buff=0.5)
         self.play(Write(l_1))
         self.play(Write(frase))
-        self.wait(2)
-        
-    def scene9(self):
-        frase_1 = Text("Derivativa Fracionaria.")
-        frase_1.to_edge(UP, buff=2)
-        self.play(Write(frase_1))
-        self.wait(2)
-        l_1 = Tex("D^{n}f(x) = \\frac{d^{\\lceil n \\rceil}}{dx^{\\lceil n \\rceil}} (I^{\\lceil n \\rceil-n}f)")
-        l_1.next_to(frase_1, DOWN, buff=0.6)
-        self.play(Write(l_1))
-        self.wait(2)
-        
-        l_2 = Tex("D^{n}f(x) = \\frac{d^{\\lceil 2.5 \\rceil}}{dx^{\\lceil 2.5 \\rceil}} (I^{\\lceil 2.5 \\rceil-2.5}f)")
-        l_2.next_to(frase_1, DOWN, buff=0.6)
-        self.play(ReplacementTransform(l_1, l_2))
-        
-        l_3 = Tex("D^{n}f(x) = \\frac{d^{3}}{dx^{3}} (I^{0.5}f)")
-        l_3.next_to(frase_1, DOWN, buff=0.6)
-        self.play(ReplacementTransform(l_2, l_3))
+        self.wait(4)
+        self.remove(*self.mobjects)
         
     def scene10(self):
-        frase_1 = Text("Derivativa Fracionaria.")
+        frase_1 = Text("Derivativa Fracionaria.", color=BLUE)
         frase_1.to_edge(UP, buff=2)
         self.play(Write(frase_1))
         self.wait(2)
@@ -391,7 +398,7 @@ class Main(Scene):
         self.remove(*self.mobjects)
         
     def scene11(self):
-        frase_1 = Text("Propriedades da Integral de Riemann-Liouville.")
+        frase_1 = Text("Propriedades da Integral de Riemann-Liouville.", color=BLUE)
         frase_1.to_edge(UP, buff=2)
         self.play(Write(frase_1))
         self.wait(2)
@@ -404,22 +411,20 @@ class Main(Scene):
         self.wait(4)
         self.remove(*self.mobjects)
         
-        
-    def scene13(self):
-        frase_1 = Text("Riemann-Liouville Derivativa Fracional Direita")
+    def scene12(self):
+        frase_1 = Text("Operador Differintegral (Riemann-Lioville)", color=BLUE)
         frase_1.to_edge(UP, buff=2)
         self.play(Write(frase_1))
         self.wait(2)
-        l_1 = Tex("\\frac{d}{dx}I^{a+1}f(x) = I^af(x)")
+        l_1 = Tex("D^\\alpha_x f(x) = \\begin{cases} \\frac{d^{\\lceil \\alpha \\rceil}}{dx^{\\lceil \\alpha \\rceil}} I^{\\lceil \\alpha \\rceil - \\alpha}f(x)& \\alpha>0\\\\ f(x) & \\alpha=0\\\\ I^{-\\alpha}f(x) & \\alpha<0. \\end{cases}")
         l_1.next_to(frase_1, DOWN, buff=0.6)
-        l_2 = Tex("I^a(I^bf) = I^{a+b}f")
-        l_2.next_to(l_1, DOWN, buff=0.6)
         self.play(Write(l_1))
-        self.play(Write(l_2))
+        self.wait(4)
+        self.remove(*self.mobjects)
         
         
         
-        
+
         
         
         

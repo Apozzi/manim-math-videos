@@ -1,0 +1,23 @@
+MEU DEUS 
+
+Classical fractional derivatives include:
+
+Grünwald–Letnikov derivative[22][23]
+Sonin–Letnikov derivative[23]
+Liouville derivative[22]
+Caputo derivative[22]
+Hadamard derivative[22][24]
+Marchaud derivative[22]
+Riesz derivative[23]
+Miller–Ross derivative[22]
+Weyl derivative[25][26][22]
+Erdélyi–Kober derivative[22]
+New fractional derivatives include:
+
+Coimbra derivative[22]
+Katugampola derivative[27]
+Hilfer derivative[22]
+Davidson derivative[22]
+Chen derivative[22]
+Caputo Fabrizio derivative[18][28]
+Atangana–Baleanu derivative[18][29]

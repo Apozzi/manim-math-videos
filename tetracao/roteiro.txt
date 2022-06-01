@@ -1,0 +1,39 @@
+Bem...
+
+Se seguirmos a história da humanidade o ser humano sempre foi uma criatura preguiçosa
+Criamos conceitos para simplificar nossa vida
+Por exemplo se tu refletir um pouquinho
+A multiplicação é o ato de somar varias vezes.
+E exponenciação multiplica multiplas vezes.
+E é normal que alguém tenha criado uma anotação para não termos que escrever a mesma coisa varias e varias vezes.
+Mas ai vem a questão por que paramos aqui?
+
+já se perguntou se a gente extender esse processo de simplificação quando repetimos exponenciações.
+Sim, criarmos um para exponenciação também?
+
+Pois essa operação se chama tetração.
+Se repetirmos novamente conseguimos Pentaçãoe, Hexação e etc.
+Esse são chamados de hyperoperadores.
+Vamos nos focar só na tetração
+
+
+Por exemplo na multiplicação 3x3 é 3+3+3 repetindo a some 3 vezes.
+Na exponenciação temos 3^3 que é 3x3x3
+E se vc for para lado mais filosófico a soma é mesma coisa
+hipotéticamente quando tu faz uma valor por exempo "a" e faz a+3 tu basicamente está adicionando a unidade 1, 3 vezes em a. (a+1+1+1)
+Essa operação  por um pode ser chamada de incrementação.
+
+(explana tetracao)
+Bem para adivinha? fazermos uma tetração não é muito diferente fazemos exponenciação multiplas vezes.
+Mas lembre ordem da exponenciação faz diferença se fazermos (3^3)^3 é diferente de 3^(3^3)
+então qual é a correta para o caso da tetração?
+Se fizermos (3^3)^3 é equivalente a 3^3*3^3*3^3 podemos somar os expoentes que resultará em 3^9
+É legal mas não é o que a gente quer pois gente não quer ficar somando e multiplicando as coisas e sim exponenciando
+Ai que temos 3^(3^3) se calcularmos o entre parenteses 3^3 é 27 isto dará 3^27 e isso é equivalente a um numero bem grande 
+que só vai aparecer na sua calculadora em notação exponencial.
+Essa de fato é a exponenciação
+Bem eu não vou criar uma tabela com todas as tetrações tu já deve perceber que os números crescem de forma estupidamente rápida e explodem sua calculadora.
+
+
+
+
