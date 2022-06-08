@@ -28,10 +28,4 @@ Aqui está uma lista de todos os vídeos feitos até então.
 [Vídeo 2 - Tetração](https://youtu.be/EEuYSm5F2Iw)
 
 
-<p align="center">
-    <a href="https://github.com/3b1b/manim">
-        <img src="https://raw.githubusercontent.com/3b1b/manim/master/logo/cropped.png">
-    </a>
-</p>
-
 
