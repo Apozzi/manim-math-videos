@@ -19,3 +19,7 @@ Após isso é só executar o comando na execução do script de seu interesse, a
 manimgl derivadas_fracionarias.py Main
 ```
 
+# Video - Derivadas de Ordem Fracionária
+
+[![Watch the video](https://img.youtube.com/vi/jR9f4DccR5E/maxresdefault.jpg)](https://youtu.be/jR9f4DccR5E)
+
