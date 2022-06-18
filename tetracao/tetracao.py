@@ -7,6 +7,7 @@ class Cancel(VGroup):
         "line_kwargs": {"color":RED},
         "buff_text": None,
         "buff_line": 0,
+        "camera_qualities": "high"
     }
     def __init__(self,text,texmob=None,**kwargs):
         digest_config(self,kwargs)

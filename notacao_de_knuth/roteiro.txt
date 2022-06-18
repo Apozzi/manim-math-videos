@@ -1,0 +1,11 @@
+Bem...
+
+Agora iremos para segunda parte do video relacionado ao hyper-operadores.
+Como vcs podem se lembrar tivemos uma breve introdução da operação de tetração
+
+Hoje estarei ensinado uma forma de algumas formas de notações em relação a hyperoperadores.
+Por exemplo, estarei inicialmente ensinando aqui a notação de Knuth, que se denota 
+a flexinha de b é notação de knuth que começa pelo exponencial.
+Ao repetir a flexa podemos conseguir a tetração a pentação e etecetera.
+Como forma de simplificar essa notação podemos colocar um numero n que representará a quantidade de repetições dessa flecha.
+
